@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Product Details</h2>
+  <hr/>
+      <div class="item">
+        <div class="col-md-8" *ngIf="product">
+          <div class="card align-content-center">
+            <img class="card-img-top" [src]="product.url" [alt]="product.name" [title]="product.name" />
+            <div class="card-block">
+              <h4 class="card-title">{{product.name}}</h4>
+              <p class="card-text">${{product.price}}</p>
+              <p class="card-text" *ngIf="product.description">{{product.description}}</p>
+              <a class="add-to-cart btn btn-primary"
+               routerLink="/shoppingcart"
+               (click)="addToCart(product)">Buy Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

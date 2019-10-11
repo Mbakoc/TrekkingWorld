@@ -1,0 +1,52 @@
+.container{
+    background-color: rgba(139, 214, 233, 0.794);
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.row {
+    margin: 15px;
+}
+.thumbnails{
+    margin-right: -15px;
+  
+    
+
+}
+
+.thumbnails a {
+    float: left;
+    width: 25%;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    
+
+}
+
+.thumbnails img {
+    display: block;
+    transition: all 0.2s ease-in-out;
+    max-width: 100%;
+    
+}
+
+.thumbnails:hover img {
+    opacity: 0.6;
+    transform: scale(0.92) rotate(-5deg);
+}
+
+.thumbnails img:hover {
+    opacity: 1.0;
+    transform: scale(1.1) rotate(7deg);
+    box-shadow: 0 0 40px rgb(12, 133, 144);
+    
+}
+#grid1 {
+    height: auto;
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="add-blog"><button class="btn btn-success" routerLink="/blog-add">Add the blog</button></div>
+    <div class="fond"> <span class="s1">blog </span><span class="s2">card</span></div>
+  <div class="row">  
+    <div class="col-md-10" *ngFor="let blog of bloglist">
+      <div class="card">
+        <img class="card-img" [src]="blog.imageUrl" [alt]="blog.title">
+        <div class="card-img-overlay">
+         <!-- <a href="#" class="btn btn-light btn-sm">Read More</a>-->
+      </div>
+        <div class="card-body">
+          <h4 class="card-title">{{blog.title}}</h4>
+          <small class="text-muted cat">
+            <i class="fas fa-globe-asia"></i>Travel
+            <i class="fas fa-thumbs-up"></i>Recomanded
+          </small>
+          <p class="card-text">{{blog.content}}</p>
+          <a href="#" class="btn btn-outline-info">Read more</a>
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+          <div class="views"> {{blog.author}} Avg 20, 12:45PM
+          </div>
+          <div class="stats">
+           	<i class="far fa-eye"></i> 87
+            <i class="far fa-comment"></i>34
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

@@ -1,0 +1,63 @@
+<!--<header id="section">
+  <div class="bckg">
+    <div class="container content">
+      <div class="row">
+        <div class="col-md-6 d-none d-md-block text-light">
+          <h1 class="display-4"><strong>Sign Up</strong></h1>
+          <p>Register if you wont to see all content of page</p>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-warning text-center card-form">
+            <div class="card-body">
+              <form (ngSubmit)="register(f)" #f="ngForm">
+                <div class="form-group">
+                  <input type="email" placeholder="Email" id="email" name="email" ngModel class="form-control form-control-lg">
+                </div>
+                <div class="form-group">
+                  <input type="password" placeholder="Password" id="password" name="password" ngModel class="form-control form-control-lg">
+                </div>
+                <button class="btn btn-outline-info btn-block" type="submit">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>-->
+<div class= "login-body">
+  <section class="content logIn-sec">  
+    
+    <div class="container">
+      <div class="row">
+          <div class="login-form col-sm-12">
+              <div class="row">
+                  <h2 class="title-login-form text-center"> Sign Up </h2>                        
+                  <div class="col-sm-6">
+                      <div class="social-media-icons">
+                          <img src="https://45eqks401uca3p9xje465puo-wpengine.netdna-ssl.com/wp-content/uploads/sites/4/2017/08/GoogleFacebookLogin.png" alt="login with social media">
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <form (ngSubmit)="register(f)" #f="ngForm">
+                          <div class="form-group">
+                            <input type="email" placeholder="Email" id="email" name="email" ngModel class="form-control form-control-lg">
+                             <!--<label for="email">Email</label>-->
+                          </div>
+                          <div class="form-group">
+                            <input type="password" placeholder="Password" id="password" name="password" ngModel class="form-control form-control-lg">  
+                              <!--<label for="password">Password</label> -->                   
+                          </div>
+                          <input type="submit" class="btn btn-warning btn-block login-bt" value="Sign Up">
+                      </form>
+                  </div>
+              </div>
+              
+          </div>
+          
+      </div>
+      
+    </div>
+  
+  </section>
+</div>

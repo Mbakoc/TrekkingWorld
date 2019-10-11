@@ -1,0 +1,116 @@
+<div class="container contact">
+<section id="contact" class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="card p-4">
+            <div class="card-body">
+              <h4>About us</h4>
+              <p>Contact us for all questions</p>
+              <hr/>
+              <h4>Address</h4>
+              <p><i class="fas fa-home"></i>Partizanskih baza 4, Novi Sad, Serbia</p>
+              <hr/>
+              <h4>Email</h4>
+              <p><i class="fas fa-envelope"></i>mbakoc81@gmail.com</p>
+              <hr/>
+              <h4>Phone</h4>
+              <p><i class="fas fa-mobile"></i>+381 62 132 45 32</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card p-4">
+          <div class="card-body">
+            <h3>Fill in the form to be in touch</h3>
+            <hr/>
+            <form [formGroup]="signupForm" (ngSubmit)="onPosalji()">
+            <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <!--<label for="name">Name</label>-->
+                        <input 
+                        type="text" 
+                        id="name" 
+                        formControlName="name"
+                        class="form-control"
+                        placeholder="Name">
+                        <span *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">
+                          Enter your name!</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <!--<label for="surname">Surname</label>-->
+                        <input 
+                        type="text" 
+                        id="surname" 
+                        formControlName="surname"
+                        class="form-control"
+                        placeholder="Surname">
+                        <span *ngIf="!signupForm.get('surname').valid && signupForm.get('surname').touched">
+                          Enter your name!</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <!--<label for="email">Email</label>-->
+                        <input 
+                          type="email" 
+                          id="email" 
+                          formControlName="email"
+                          class="form-control"
+                          placeholder="Email"/>
+                          <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+                            Please enter a valid email!</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <!--<label for="phone">Phone number:</label>-->
+                        <input 
+                          type="phone" 
+                          id="phone" 
+                          formControlName="phone"
+                          class="form-control" 
+                          placeholder="Phone number"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea 
+                          class="form-control"
+                          id="textarea"
+                          formControlName="textarea"
+                          class="form-control"
+                          placeholder="Write your message..">
+                        </textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-10">
+                    <span *ngIf="!signupForm.valid && signupForm.touched">
+                        Fill in the form!</span><br>
+                    <button class="btn btn-outline-primary btn-block" type="submit">Send</button>
+                  </div>      
+               </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</section>
+<div class="container">
+  <agm-map 
+        [latitude]="latitude" 
+        [longitude]="longitude" 
+        (mapClick)="onChoseLocation($event)" >
+            <agm-marker 
+                [latitude]="latitude" 
+                [longitude]="longitude">
+            </agm-marker>
+    </agm-map>
+</div>
+</div>
+

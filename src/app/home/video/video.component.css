@@ -1,0 +1,13 @@
+.container{
+    text-align: center;
+    background: url(/assets/slike/mountain-984083_1280.jpg) no-repeat;
+    background-size: cover; 
+    padding: 20px; 
+    border-radius: 5px;
+}
+video{
+    max-width: 100%;
+}
+table{
+    border-radius: 5px;
+}

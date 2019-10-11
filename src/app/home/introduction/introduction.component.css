@@ -1,0 +1,14 @@
+.container{
+    padding: 10px;
+    border-radius: 5px;
+}
+h1 {font-size: 2.4rem;margin-bottom: 30px;}
+.banner img {width:100%;}
+.banner-box {position: relative;}
+.intro-text { width:100%; position: absolute; top:75%; text-align: center; color:#fff;}
+.intro-text-box { width: 62%;margin: auto;background-color: rgba(157, 184, 155, 0.6);padding: 20px;border: 10px solid #beecc8af;}
+.intro-text-box h1 {font-size:3em;}
+
+@media (max-width: 767px) {
+    .intro-text {display: none;}
+    }

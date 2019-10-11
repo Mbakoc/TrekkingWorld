@@ -1,0 +1,9 @@
+<a class="navbar-link" routerLink="/cart">
+  <span class="icon">
+    <i class="fas fa-shopping-cart"></i>
+    <!--<span class="badge badge-light">Light{{ cartminiProducts.length }}</span>-->
+  </span>
+  Cart &nbsp; <span class="total" *ngIf="cartminiProducts.length > 0">
+    {{ cartminiProducts.length }}
+  </span>
+</a>

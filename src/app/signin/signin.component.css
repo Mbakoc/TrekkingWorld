@@ -1,0 +1,204 @@
+/* #section{
+    background: url(/assets/slike/trekking1.jpg) no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    
+}
+#section .bckg{
+    background-color: rgba( 12, 12, 12, 0.5);
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    text-align: center;
+    padding: 150px;
+}
+.card-form{
+   opacity: 0.8;
+}*/
+
+.login-body {
+    background-image: url(/assets/slike/trekking2.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative
+    
+}
+
+.login-body .logIn-sec {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-body .login-form {
+    margin: auto;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+.login-body .login-form h2 {
+    color: #f0ad4e !important;
+    text-transform: capitalize;
+   font-size: 30px !important;
+    margin: 0 0 30px
+}
+.login-body .login-form form {
+    border-left: 1px solid #f0ad4e;
+    padding: 36px 0 36px 40px;
+    margin-left: -20px;
+    position: relative;
+    transition: .5s;
+}
+
+.login-body .social-media-icons {
+    padding: 0 35px
+}
+
+.login-body .login-form form:before {
+    
+    content: "OR";
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid #f0ad4e;
+    display: block;
+    top: 50%;
+    left: -10.5%;
+    transform: translate(50%, -50%);
+    background: rgba(0,0,0,.8)
+    
+}
+.login-body .login-form .form-group {
+    position: relative;
+    
+}
+.login-body .login-form .form-group input {
+    border: none;
+    padding: 0;
+    border-bottom: 1px solid #f0ad4e;
+    background-color: transparent;
+     color: #FFF;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.login-body .login-form input[type="submit"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+.login-body .login-form .form-group label {
+    position: absolute;
+    top: 20px;
+    transition: .5s;
+}
+.login-body .login-form .form-group input:focus ~ label,
+.login-body .login-form .form-group input:valid ~ label{
+    font-size: 13px;
+    top: -10px;
+    box-shadow: none !important;
+}
+
+.login-body .login-form img {
+  width: 100%;
+}
+
+
+/* Style for different size media */
+
+@media (min-width: 1200px) {
+    .login-body .login-form form:before {
+        content: "OR";
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        border-radius: 50%;
+        position: absolute;
+        border: 1px solid #f0ad4e;
+        display: block;
+        top: 50%;
+        left: -8.5%;
+        transform: translate(50%, -50%);
+        background: rgba(0,0,0,.8);
+    }
+}
+
+@media (max-width: 991px) {
+    
+    .login-body .login-form form:before {
+        content: "OR";
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        border-radius: 50%;
+        position: absolute;
+        border: 1px solid #f0ad4e;
+        display: block;
+        top: 50%;
+        left: -13.5%;
+        transform: translate(50%, -50%);
+        background: rgba(0,0,0,.8)
+    }
+    
+    .login-body .social-media-icons {
+      
+        position: absolute;
+        top: 45px
+    } 
+       
+}
+
+@media (max-width: 767px) {
+   .login-body .login-form form {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    position: relative
+}
+
+.login-body .login-form form:before {
+    
+    display: none
+    
+}
+    
+    .login-body .social-media-icons {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        border-bottom: 1px solid #d78e0e;
+        position: unset;
+    } 
+    
+    .login-body .login-form form:before {
+        content: "OR";
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        border-radius: 50%;
+        position: absolute;
+        border: 1px solid #f0ad4e;
+        display: block;
+        top: -31px;
+        left: 40%;
+        transform: translate(50%, -50%);
+        background: rgba(0,0,0,.8)
+    }
+    
+}

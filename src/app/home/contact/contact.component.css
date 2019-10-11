@@ -1,0 +1,28 @@
+agm-map{
+    height: 300px;
+}
+.contact{
+    background-color: rgb(240, 230, 219);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+i{
+    padding: 10px;
+}
+#podaci{
+    text-align: center;
+}
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+}
+input .ng-invalid .ng-touched{
+    border-bottom: 1px solid red;
+}
+span{
+    color: red;
+}
+.col-md-4{
+    text-align: center;
+}

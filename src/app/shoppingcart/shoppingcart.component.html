@@ -1,0 +1,212 @@
+<div class="container py-4">
+    <h1 class="text-center text-secondary mb-5">TREKKING GEAR & TREKKING ACCESSORIES</h1>
+    <div class="form-row text-center">
+      <div class="col-12 col-sm">
+        <div class=" alert alert-secondary alert-rounded alert-secondary-outline" role="alert">
+          1. DELIVERY INFORMATION
+        </div>
+      </div>
+      <div class="col-12 col-sm">
+        <div class=" alert alert-secondary alert-rounded alert-secondary-outline" role="alert">
+          2.SHIPPING & PAYMENT 
+        </div>
+      </div>
+      <div class="col-12 col-sm">
+        <div class=" alert alert-secondary alert-rounded alert-secondary-outline" role="alert">
+          3.THANK YOU 
+        </div>
+      </div>
+    </div>
+  
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8">
+          <div id="naslov">
+              <h5>SHOPPING CART LIST<i class="fas fa-shopping-cart ml-2"></i></h5>
+          </div>
+       
+        <table class="table  col-md-10  table-light table-bordered table-hover" >
+            <thead>
+                <tr class="bg-secondary">
+                    <td></td>
+                    <td>Picture</td>
+                    <td>List of products</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of cart; let i = index;">
+                    <td>
+                       <span class="icon" (click)="removeItem(i)">
+                          <i class="fas fa-trash-alt"></i>
+                       </span>
+                    </td>
+                    <td><img class="cars-img-top align-middle" [src]="product.url" style="height:80px ; width: auto ;"></td>
+                    <td class="align-middle" style="text-align: left;">{{product.name}}</td>
+                    <td class="align-middle">{{product.price}}</td>
+                    <td class="align-middle">{{numberSItem(product.id)}}</td>
+                    <td class="align-middle"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="align-middle" ></td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle" *ngIf="numberOfItems() > 0">{{numberOfItems()}}</td>
+                  <td class="align-middle" *ngIf="numberOfItems() > 0">{{totalPrice()}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <section id="contact" class="py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+                <div class="card p-4" id="contact">
+                  <div class="card-body">
+                    <h4>About us</h4>
+                    <p>Contact us for all questions</p>
+                    <hr/>
+                    <h4>Address</h4>
+                    <p><i class="fas fa-home"></i> Partizanskih baza 4, Novi Sad, Serbia</p>
+                    <hr/>
+                    <h4>Email</h4>
+                    <p><i class="fas fa-envelope"></i> mbakoc81@gmail.com</p>
+                    <hr/>
+                    <h4>Phone</h4>
+                    <p><i class="fas fa-mobile"></i> +381 62 132 45 32</p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card p-4">
+                <div class="card-body">
+                    <h3>
+                      <strong>PAYMENT METHOD<i class="fas fa-money-bill-alt ml-2"></i></strong> 
+                      </h3>
+                  <hr/>
+                  <form [formGroup]="signupForm" (ngSubmit)="onPosalji()">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <!--<label for="name">Name</label>-->
+                              <input 
+                              type="text" 
+                              id="name" 
+                              formControlName="name"
+                              class="form-control"
+                              placeholder="Name">
+                              <span *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">
+                                Enter your name!</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <!--<label for="surname">Surname</label>-->
+                              <input 
+                              type="text" 
+                              id="surname" 
+                              formControlName="surname"
+                              class="form-control"
+                              placeholder="Surname">
+                              <span *ngIf="!signupForm.get('surname').valid && signupForm.get('surname').touched">
+                                Enter your name!</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <!--<label for="email">Email</label>-->
+                              <input 
+                                type="email" 
+                                id="email" 
+                                formControlName="email"
+                                class="form-control"
+                                placeholder="Email"/>
+                                <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+                                  Please enter a valid email!</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <!--<label for="phone">Phone number:</label>-->
+                              <input 
+                                type="phone" 
+                                id="phone" 
+                                formControlName="phone"
+                                class="form-control" 
+                                placeholder="Phone number"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <textarea 
+                                class="form-control"
+                                id="textarea"
+                                formControlName="textarea"
+                                class="form-control"
+                                placeholder="Write your message..">
+                              </textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-10">
+                          <span *ngIf="!signupForm.valid && signupForm.touched">
+                              Fill in the form!</span><br>
+                        </div>      
+                     </div>
+                     <div class="form-row mt-4">
+                        <label for="paymentmethod">Choose payment method</label>
+                        <div class="form-group col-md-12">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                              <label class="form-check-label" for="inlineRadio1">Pay on delivery <i class="fas fa-truck"></i></label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <label class="form-check-label" for="inlineRadio2">Pay by ATM transfer <i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-visa"></i></label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                              <label class="form-check-label" for="inlineRadio3">Pay by electronic transfer <i class="fab fa-cc-paypal"></i></label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="imputCard">Enter your card number</label>
+                          <input type="number" class="form-control" id="imputCard" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-row col-md-6">
+                        <div class="form-group col-md-12">
+                          <label for="exampleFormControlInput1"></label>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <h5>Choose a store</h5>
+                            <label for="inputCity"> Choose your store city.</label>
+                            <select id="inputCity" class="form-control" required>
+                            <option selected value="">Choose...</option>
+                            <option>Novi Sad</option>
+                            <option>Beograd</option>
+                            <option>Subotica</option>
+                            <option>Nis</option>
+                            <option>Zrenjanin</option>
+                            </select>
+                          <div class="invalid-feedback">
+                            Choose your store city.
+                          </div>
+                        </div>
+                      </div>
+                        <button type="submit" class="btn btn-outline-info" (click)="onPosalji()">Continue to buy</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+        </div>
+      </section>
+      <app-footer></app-footer>

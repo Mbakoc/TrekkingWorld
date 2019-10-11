@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row p-2">
+    <div *ngFor="let product of products; index as productId">
+     <div class="col-md-6">
+         <div class="card" style="width: 20rem">
+            <div id="slika">
+             <img class="cars-img-top" [src]="product.url"/>
+            </div>
+             <div class="card-block">
+               <h4 class="card-title">{{product.name}}</h4>
+               <p class="card-text">${{product.price}}</p>
+               <p class="card-text" *ngIf="product.description">{{product.description}}</p>
+               <a class="add-to-cart btn btn-primary" [routerLink]="['/itemdetails', productId]">See details</a>
+             </div>
+     </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

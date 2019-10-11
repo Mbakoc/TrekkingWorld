@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    margin: 5em auto;
+}
+.card{
+    text-align: center;
+    max-width: 500px;
+    height: 450px;
+}
+#left #right{
+    max-width: 50px;
+    margin: 30px;
+}
+@media screen and (max-width: 600px) {
+    .card{
+        width: 150px;
+        max-height: 320px;
+    }
+    .card-img-top{
+        height: 120px;
+    }
+  }
